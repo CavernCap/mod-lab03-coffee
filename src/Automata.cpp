@@ -31,7 +31,7 @@ void Automata::off() {
 void Automata::coin(int amount) {
     if (state == STATES::WAITING || state == STATES::ON) {
         cash += amount;
-        //std::cout << amount << " added to the balance. Total: " 
+        //std::cout << amount << " added to the balance. Total: "
         //<< cash << std::endl;
         state = STATES::WAITING;
     } else {
@@ -78,7 +78,7 @@ void Automata::choice(const std::string& item) {
             //<< std::endl;
         }
     } else {
-        //std::cout << "Invalid operation. 
+        //std::cout << "Invalid operation.
         //Automata is not waiting for a choice." << std::endl;
     }
 }
