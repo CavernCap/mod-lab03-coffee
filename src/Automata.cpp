@@ -1,4 +1,4 @@
-#include "pch.h"
+"Copyright [2024] <Kapochkin Mikhail>"
 #include "Automata.h"
 
 
@@ -31,11 +31,12 @@ void Automata::off() {
 void Automata::coin(int amount) {
     if (state == STATES::WAITING || state == STATES::ON) {
         cash += amount;
-        //std::cout << amount << " added to the balance. Total: " << cash << std::endl;
+        //std::cout << amount << " added to the balance. Total: " 
+        //<< cash << std::endl;
         state = STATES::WAITING;
-    }
-    else {
-        //std::cout << "Invalid operation. Automata is not waiting for a coin." << std::endl;
+    } else {
+        //std::cout << "Invalid operation. Automata is not waiting for a coin."
+        //<< std::endl;
     }
 }
 
@@ -64,20 +65,21 @@ void Automata::choice(const std::string& item) {
             int index = std::distance(menu.begin(), it);
             int price = prices[index];
             if (check(price)) {
-                //std::cout << "You've chosen " << item << ". Please wait while it's being prepared." << std::endl;
+                //std::cout << "You've chosen " << item <<
+                //". Please wait while it's being prepared." << std::endl;
                 state = STATES::COOKING;
                 cook(item);
+            } else {
+                //std::cout << "Insufficient funds. Please add more money."
+                //<< std::endl;
             }
-            else {
-                //std::cout << "Insufficient funds. Please add more money." << std::endl;
-            }
+        } else {
+            //std::cout << "Invalid choice. Please select from the menu."
+            //<< std::endl;
         }
-        else {
-            //std::cout << "Invalid choice. Please select from the menu." << std::endl;
-        }
-    }
-    else {
-        //std::cout << "Invalid operation. Automata is not waiting for a choice." << std::endl;
+    } else {
+        //std::cout << "Invalid operation. 
+        //Automata is not waiting for a choice." << std::endl;
     }
 }
 
@@ -89,12 +91,13 @@ bool Automata::check(int price) const {
 // Отмена сеанса обслуживания
 void Automata::cancel() {
     if (state == STATES::WAITING || state == STATES::ACCEPT) {
-        //std::cout << "Transaction canceled. Returning money." << std::endl;
+        //std::cout << "Transaction canceled. Returning money."
+        //<< std::endl;
         cash = 0;
         state = STATES::ON;
-    }
-    else {
-        //std::cout << "Invalid operation. No transaction to cancel." << std::endl;
+    } else {
+        //std::cout << "Invalid operation. No transaction to cancel."
+        //<< std::endl;
     }
 }
 
