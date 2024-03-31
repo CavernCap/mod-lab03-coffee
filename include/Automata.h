@@ -1,3 +1,4 @@
+"Copyright [2024] <Kapochkin Mikhail>"
 #pragma once
 #include <vector>
 #include <string>
@@ -9,14 +10,13 @@ enum class STATES {
     ACCEPT,
     COOKING
 };
-class Automata
-{
-private:
+class Automata {
+ private:
     int cash;
     std::vector<std::string> menu;
     std::vector<int> prices;
     STATES state;
-public:
+ public:
     Automata();
     void on();
     void off();
