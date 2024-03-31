@@ -1,4 +1,4 @@
-"Copyright [2024] <Kapochkin Mikhail>"
+//Copyright 2024 Kapochkin Mikhail
 #pragma once
 #include <vector>
 #include <string>
