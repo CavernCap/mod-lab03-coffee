@@ -5,7 +5,7 @@ TEST(automata, turn_it_on) {
     Automata automata;
     automata.on();
     STATES current_state = automata.getState();
-  EXPECT_EQ(STATES::ON,current_state);
+  EXPECT_EQ(STATES::ON, current_state);
 }
 
 TEST(automata, turn_it_off) {
