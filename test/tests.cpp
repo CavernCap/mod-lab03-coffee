@@ -1,4 +1,4 @@
-"Copyright [2024] <Kapochkin Mikhail>"
+//Copyright [2024] <Kapochkin Mikhail>
 #include "Automata.h"
 
 TEST(automata, turn_it_on) {
