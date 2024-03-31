@@ -1,7 +1,7 @@
+"Copyright [2024] <Kapochkin Mikhail>"
 #include "Automata.h"
 
-int main()
-{
+int main() {
     Automata automata;
     automata.on();
     automata.coin(50);
