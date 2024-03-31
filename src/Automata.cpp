@@ -68,6 +68,7 @@ void Automata::choice(const std::string& item) {
                 //std::cout << "You've chosen " << item <<
                 //". Please wait while it's being prepared." << std::endl;
                 state = STATES::COOKING;
+                cash -= price;
                 cook(item);
             } else {
                 //std::cout << "Insufficient funds. Please add more money."
@@ -110,6 +111,5 @@ void Automata::cook(const std::string& item) {
 // Завершение обслуживания
 void Automata::finish() {
     //std::cout << "Transaction completed. Enjoy your drink!" << std::endl;
-    cash = 0;
     state = STATES::ON;
 }
