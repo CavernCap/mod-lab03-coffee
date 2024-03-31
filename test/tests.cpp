@@ -1,4 +1,5 @@
 //Copyright [2024] <Kapochkin Mikhail>
+#include <gtest/gtest.h>
 #include "Automata.h"
 
 TEST(automata, turn_it_on) {
